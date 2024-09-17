@@ -5,7 +5,7 @@
         <mxCell id="0" style=";html=1;" />
         <mxCell id="1" style=";html=1;" parent="0" />
         <mxCell id="S16UhWUdueVycTpBz9DC-1" value="Ingredienser" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="360" width="140" height="56" as="geometry" />
+          <mxGeometry x="280" y="380" width="140" height="56" as="geometry" />
         </mxCell>
         <mxCell id="xfT99TKuTY2AC6sLYti0-56" value="Name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="S16UhWUdueVycTpBz9DC-1">
           <mxGeometry y="30" width="140" height="26" as="geometry" />
@@ -42,7 +42,7 @@
             <mxPoint x="70" y="370" as="sourcePoint" />
             <mxPoint x="230" y="370" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="90" y="390" />
+              <mxPoint x="90" y="410" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -66,7 +66,7 @@
             <mxPoint x="570" y="330" as="sourcePoint" />
             <mxPoint x="730" y="330" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="480" y="390" />
+              <mxPoint x="480" y="410" />
               <mxPoint x="480" y="110" />
             </Array>
           </mxGeometry>
