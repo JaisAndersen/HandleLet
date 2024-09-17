@@ -20,16 +20,13 @@
           <mxGeometry y="56" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="S16UhWUdueVycTpBz9DC-9" value="Brugere" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="200" width="140" height="108" as="geometry" />
+          <mxGeometry x="280" y="200" width="140" height="82" as="geometry" />
         </mxCell>
         <mxCell id="xfT99TKuTY2AC6sLYti0-53" value="Name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="S16UhWUdueVycTpBz9DC-9">
           <mxGeometry y="30" width="140" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="xfT99TKuTY2AC6sLYti0-54" value="Adress" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="S16UhWUdueVycTpBz9DC-9">
+        <mxCell id="xfT99TKuTY2AC6sLYti0-54" value="Password" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="S16UhWUdueVycTpBz9DC-9">
           <mxGeometry y="56" width="140" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="xfT99TKuTY2AC6sLYti0-52" value="Phone" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="S16UhWUdueVycTpBz9DC-9">
-          <mxGeometry y="82" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="S16UhWUdueVycTpBz9DC-13" value="Indkøbsliste" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="280" y="80" width="140" height="56" as="geometry" />
