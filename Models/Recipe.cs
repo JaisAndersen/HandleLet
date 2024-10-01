@@ -4,6 +4,7 @@
     {
         
         private static int NextId = 1;
+        public Ingredients Ingredients { get; set; }
 
         public Recipe(string Title, string Description)
         {
