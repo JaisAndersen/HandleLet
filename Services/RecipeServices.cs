@@ -1,58 +1,63 @@
-﻿using HandleLet.Models;
+﻿using HandleLet.Interfaces;
+using HandleLet.Models;
 using Microsoft.AspNetCore.Identity;
+using System.Net.Mail;
 
 namespace HandleLet.Services
 {
-    public class RecipeServices
+    public class RecipeService : IRecipe
     {
         public List<Recipe> Recipes;
 
-        public RecipeServices()
+        public RecipeService()
         {
-            Recipes = MockUserStories.GetMockUserStories();
+           // Recipes = MockUserStories.GetMockUserStories();
         }
 
-        public List<Recipe> GetUserStories()
+        public List<Recipe> GetRecipe()
         {
             return Recipes;
         }
 
-        public Recipe GetUserStory(int Id)
+        public Recipe GetRecipe(string Title)
         {
             foreach (Recipe Recipe in Recipes)
             {
-                if (Recipe.Id == Id)
+                if (Recipe.Title == Title)
                     return Recipe;
             }
 
             return null;
         }
-        public Recipe DeleteUserStory(int RecipeID)
+        public void DeleteRecipe(string Title)
         {
-            Recipe RecipeToBeDeleted = null;
-            foreach (Recipe rp in Recipes)
+            foreach (Recipe recipe in Recipes.ToList())
             {
-                if (rp.Id == RecipeID)
-                {
-                    RecipeToBeDeleted = rp;
-                    break;
-                }
+                if (recipe.Title == Title)
+                    Recipes.Remove(recipe);
             }
-            if (RecipeToBeDeleted != null)
-            {
-                Recipes.Remove(RecipeToBeDeleted);
-            }
-            return RecipeToBeDeleted;
         }
 
 
-        public void CreateUserStory(Recipe recipe)
+        public void CreateRecipe(Recipe recipe)
         {
 
             Recipes.Add(recipe);
 
         }
 
+        //public void UpdateRecipe(Recipe Title)
+        //{
+        //    foreach (Recipe Recipe in Recipes)
+        //    {
+        //        if (Recipe._title == recipe._title)
+        //        {
+        //            Recipe.Id = item.id;
+        //            Recipe._title = item._title;
+
+        //        }
+        //    }
+        //}
 
 
 
