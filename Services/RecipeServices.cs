@@ -1,54 +1,55 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using HandleLet.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace HandleLet.Services
 {
     public class RecipeServices
     {
-        public List<Recipe> userStories;
+        public List<Recipe> Recipes;
 
-        public UserStoryService()
+        public RecipeServices()
         {
-            userStories = MockUserStories.GetMockUserStories();
+            Recipes = MockUserStories.GetMockUserStories();
         }
 
-        public List<UserStory> GetUserStories()
+        public List<Recipe> GetUserStories()
         {
-            return userStories;
+            return Recipes;
         }
 
-        public UserStory GetUserStory(int Id)
+        public Recipe GetUserStory(int Id)
         {
-            foreach (UserStory userStory in userStories)
+            foreach (Recipe Recipe in Recipes)
             {
-                if (userStory.Id == Id)
-                    return userStory;
+                if (Recipe.Id == Id)
+                    return Recipe;
             }
 
             return null;
         }
-        public UserStory DeleteUserStory(int userstoryId)
+        public Recipe DeleteUserStory(int RecipeID)
         {
-            UserStory userstoryToBeDeleted = null;
-            foreach (UserStory us in userStories)
+            Recipe RecipeToBeDeleted = null;
+            foreach (Recipe rp in Recipes)
             {
-                if (us.Id == userstoryId)
+                if (rp.Id == RecipeID)
                 {
-                    userstoryToBeDeleted = us;
+                    RecipeToBeDeleted = rp;
                     break;
                 }
             }
-            if (userstoryToBeDeleted != null)
+            if (RecipeToBeDeleted != null)
             {
-                userStories.Remove(userstoryToBeDeleted);
+                Recipes.Remove(RecipeToBeDeleted);
             }
-            return userstoryToBeDeleted;
+            return RecipeToBeDeleted;
         }
 
 
-        public void CreateUserStory(UserStory userStory)
+        public void CreateUserStory(Recipe recipe)
         {
 
-            userStories.Add(userStory);
+            Recipes.Add(recipe);
 
         }
 

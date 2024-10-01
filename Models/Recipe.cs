@@ -2,10 +2,8 @@
 {
     public class Recipe
     {
-        private _title
-        
-        public string _Description { get; set; }
 
+        private static int NextId = 1;
 
         public Recipe(string Title, string Description)
         {
@@ -18,8 +16,8 @@
         }
 
 
-
-        public string _title { get; set; }
-        public string _Description { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
     }
 }
