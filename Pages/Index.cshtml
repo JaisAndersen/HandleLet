@@ -4,6 +4,40 @@
     ViewData["Title"] = "Opskrifter";
 }
 <div class="text-center">
-    <h1>@ViewData["Title"]</h1>
-    <p>Her kommer opskrifter</a></p>
+    <h1>@ViewData["Opskrifter"]</h1>
+   
 </div>
+
+<h2 class="border-bottom" style="text-align: center;">Opskrifter:</h2>
+
+
+
+
+<main>
+    @foreach (var Recipe in @Model.recipies)
+    {
+        <div class="card mt-4">
+<div class="card-header">
+<h5 class="card-title">(@Recipe.Id) @Recipe.Title</h5>
+</div>
+<div class="card-body">
+<p class="card-text">@Recipe.Description</p>
+<div class="card-footer">
+                    <a class="btn" type="button" asp-page="CreateUserStory"><i class="fa fa-plus"></i></a>
+                    <a class="btn" type="button" asp-page="DeleteUserStory" asp-route-id="@Recipe.Id"><i class="fa fa-trash"></i></a>
+                    <a class="btn" type="button" asp-page="UserStoryDetail" asp-route-id="@Recipe.Id"><i class="fa fa-info-circle"></i></a>
+</div>
+</div>
+</div>
+
+
+    }
+
+
+
+    
+
+
+
+
+</main>
