@@ -9,20 +9,20 @@ namespace HandleLet.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private RecipeService recipeService;
+        
 
-        public IndexModel(ILogger<IndexModel> logger, RecipeService recipeServices)
+        public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-            this.recipeService = recipeServices;
+            
         }
 
 
         public void OnGet()
         {
-            recipes = recipeService.GetRecipe();
+            
         }
-        public List<Recipe> recipes { get; private set; }
+      
 
         
     }

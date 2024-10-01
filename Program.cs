@@ -1,3 +1,6 @@
+using HandleLet.Interfaces;
+using HandleLet.Services;
+
 namespace HandleLet
 {
     public class Program
@@ -8,6 +11,7 @@ namespace HandleLet
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddScoped<IRecipe, RecipeService>();
 
             var app = builder.Build();
 

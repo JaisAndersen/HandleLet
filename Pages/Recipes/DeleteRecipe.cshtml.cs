@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HandleLet.Pages.CRUDRecipe
+namespace HandleLet.Pages.Recipes
 {
-    public class ReadRecipeModel : PageModel
+    public class DeleteRecipeModel : PageModel
     {
         public void OnGet()
         {

@@ -9,6 +9,9 @@ namespace HandleLet.Models
         private static int NextId = 1;
         public Ingredients Ingredients { get; set; }
 
+
+
+
         public Recipe()
         {
             _title = Title;

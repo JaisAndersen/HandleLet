@@ -11,7 +11,7 @@ namespace HandleLet.Services
 
         public RecipeService()
         {
-           // Recipes = MockUserStories.GetMockUserStories();
+            Recipes = new List<Recipe>();
         }
 
         public List<Recipe> GetRecipe()
