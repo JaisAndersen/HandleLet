@@ -9,9 +9,9 @@ namespace HandleLet.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private RecipeServices recipeService;
+        private RecipeService recipeService;
 
-        public IndexModel(ILogger<IndexModel> logger, RecipeServices recipeServices)
+        public IndexModel(ILogger<IndexModel> logger, RecipeService recipeServices)
         {
             _logger = logger;
             this.recipeService = recipeServices;
@@ -20,7 +20,7 @@ namespace HandleLet.Pages
 
         public void OnGet()
         {
-            recipes = recipeService.GetUserStories();
+            recipes = recipeService.GetRecipe();
         }
         public List<Recipe> recipes { get; private set; }
 

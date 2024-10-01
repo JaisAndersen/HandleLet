@@ -1,24 +1,35 @@
-﻿namespace HandleLet.Models
+﻿using System.Xml.Linq;
+
+namespace HandleLet.Models
 {
     public class Recipe
     {
-        
+        private string _description;
+        private string _title;
         private static int NextId = 1;
         public Ingredients Ingredients { get; set; }
 
-        public Recipe(string Title, string Description)
+        public Recipe()
         {
             _title = Title;
             _description = Description;
             
             
 
-            Id = NextId++;
+            id = NextId++;
         }
 
 
-        public int Id { get; set; }
-        public string _title { get; set; }
-        public string _description { get; set; }
+        public int id { get; set; }
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
     }
 }
