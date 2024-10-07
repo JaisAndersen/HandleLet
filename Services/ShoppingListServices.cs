@@ -21,11 +21,12 @@ namespace HandleLet.Services
             foreach (ShoppingList shoppingList in ShoppingList)
             {
                 if (shoppingList.Name == Name)
-                return shoppingList;
+                    return shoppingList;
             }
 
             return null;
         }
+
         public void DeleteShoppingList(string Name)
         {
             foreach (ShoppingList shoppingList in ShoppingList.ToList())
@@ -34,7 +35,6 @@ namespace HandleLet.Services
                     ShoppingList.Remove(shoppingList);
             }
         }
-
 
         public void CreateShoppingList(ShoppingList shoppingList)
         {
