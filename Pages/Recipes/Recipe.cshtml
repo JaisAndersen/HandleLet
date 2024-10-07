@@ -1,12 +1,10 @@
 ﻿@page
 @model RecipeModel
 @{
+    ViewData["Title"] = "Opskrifter";
 }
 
-<h2 class="border-bottom" style="text-align: center;">Opskrifter:</h2>
-
-
-
+<h1 class="border-bottom" style="text-align: center;">@ViewData["Title"]</h1>
 
 <main>
     @foreach (var Recipe in @Model.recipes)
