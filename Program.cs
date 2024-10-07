@@ -12,6 +12,7 @@ namespace HandleLet
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddScoped<IRecipe, RecipeService>();
+            builder.Services.AddScoped<IShoppingList, ShoppingListServices>();
 
             var app = builder.Build();
 

@@ -10,7 +10,6 @@ namespace HandleLet.Interfaces
 
         public void DeleteRecipe(string Title);
 
-
         public void CreateRecipe(Recipe recipe);
   
 
