@@ -1,5 +1,7 @@
 using HandleLet.Interfaces;
+using HandleLet.Models;
 using HandleLet.Services;
+using System.ComponentModel;
 
 namespace HandleLet
 {
@@ -13,6 +15,8 @@ namespace HandleLet
             builder.Services.AddRazorPages();
             builder.Services.AddScoped<IRecipe, RecipeService>();
             builder.Services.AddScoped<IShoppingList, ShoppingListServices>();
+            //builder.Services.AddTransient<IRecipe, RecipeJson>();
+            //builder.Services.AddTransient<IShoppingList, ShoppingListJson>();
 
             var app = builder.Build();
 
