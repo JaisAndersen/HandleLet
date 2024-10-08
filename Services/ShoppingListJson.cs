@@ -1,21 +1,19 @@
-﻿using HandleLet.Interfaces;
+﻿using HandleLet.JsonHelpers;
 using HandleLet.Models;
-using HandleLet.JsonHelpers;
-
 
 namespace HandleLet.Services
 {
-    public class RecipeJson : IRecipe
+    public class ShoppingListJson
     {
-        string fileName = @"C:\Users\jaish\Source\Repos\HandleLet\Data\jsonRecipes.json";
+        string fileName = @"C:\Users\jaish\Source\Repos\HandleLet\Data\jsonShoppingList.json";
 
-        public void CreateRecipe(Recipe recipe)
+        public void CreateShoppingList(ShoppingList shoppingList)
         {
-            List<Recipe> recipes = GetRecipe();
-            recipes.Add(recipe);
-            JsonFileWriterRecipe.WriteToJson(recipes, fileName);
+            List<ShoppingList> shoppingLists = GetShoppingList();
+            shoppingLists.Add(shoppingList);
+            JsonFileWriterShoppingList.WriteToJson(shoppingLists, fileName);
         }
- 
+
         //public List<Item> FilterItems(string filter)
         //{
         //    List<Item> filteredList = new List<Item>();
@@ -29,28 +27,28 @@ namespace HandleLet.Services
         //    return filteredList;
         //}
 
-        public List<Recipe> GetRecipe()
+        public List<ShoppingList> GetShoppingList()
         {
-            return JsonFileReaderRecipe.ReadJson(fileName);
+            return JsonFileReaderShoppingList.ReadJson(fileName);
         }
 
-        public Recipe GetRecipe(string Title)
+        public ShoppingList GetShoppingList(string Name)
         {
-            foreach (Recipe recipe in GetRecipe())
+            foreach (ShoppingList shoppingList in GetShoppingList())
             {
-                if (recipe.Title == Title) return recipe;
+                if (shoppingList.Name == Name) return shoppingList;
             }
-            return new Recipe();
+            return new ShoppingList();
         }
 
-        public void DeleteRecipe(string Title)
+        public void DeleteShoppingList(string Name)
         {
-            List<Recipe> Recipes = GetRecipe();
-            foreach (Recipe recipe in Recipes.ToList())
+            List<ShoppingList> ShoppingLists = GetShoppingList();
+            foreach (ShoppingList shoppingList in ShoppingLists.ToList())
             {
-                if (recipe.Title == Title)
-                    Recipes.Remove(recipe);
-                JsonFileWriterRecipe.WriteToJson(Recipes, fileName);
+                if (shoppingList.Name == Name)
+                    ShoppingLists.Remove(shoppingList);
+                JsonFileWriterShoppingList.WriteToJson(ShoppingLists, fileName);
             }
         }
 
