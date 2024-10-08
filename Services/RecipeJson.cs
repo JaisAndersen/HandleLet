@@ -15,7 +15,13 @@ namespace HandleLet.Services
             recipes.Add(recipe);
             JsonFileWriterRecipe.WriteToJson(recipes, fileName);
         }
- 
+
+        public Recipe GetRecipeId(int id)
+        {
+            return null;
+        }
+
+
         //public List<Item> FilterItems(string filter)
         //{
         //    List<Item> filteredList = new List<Item>();
