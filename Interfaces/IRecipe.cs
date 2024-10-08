@@ -6,6 +6,7 @@ namespace HandleLet.Interfaces
     {
         public List<Recipe> GetRecipe();
 
+        public Recipe GetRecipeId(int id);
         public Recipe GetRecipe(string Title);
 
         public void DeleteRecipe(string Title);

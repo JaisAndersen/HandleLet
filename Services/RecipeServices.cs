@@ -19,6 +19,16 @@ namespace HandleLet.Services
             return Recipes;
         }
 
+        public Recipe GetRecipeId(int id)
+        {
+            foreach (Recipe Recipe in Recipes)
+            {
+                if (Recipe.id == id)
+                    return Recipe;
+            }
+            return new Recipe();
+        }
+
         public Recipe GetRecipe(string Title)
         {
             foreach (Recipe Recipe in Recipes)
